@@ -20,6 +20,7 @@ data/*.json
 data/*.csv
 data/*.xlsx
 tests/json/*
+tests/json/
 
 # Ignore temporary logs and analysis exports
 *.log
