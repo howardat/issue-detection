@@ -1,17 +1,15 @@
-[project]
+[tool.poetry]
 name = "issue-detection"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "howardat",email = "olzhas.nurzhanovich.kakimzhanov@gmail.com"}
-]
+authors = ["howardat <olzhas.nurzhanovich.kakimzhanov@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-]
+packages = [{ include = "issue_detection", from = "src" }]
 
-[tool.poetry]
-packages = [{include = "issue_detection", from = "src"}]
+[tool.poetry.dependencies]
+python = ">=3.13"
+requests = "^2.32.5"
+streamlit = "^1.53.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

@@ -12,7 +12,6 @@ with open('../../data/reviews.json', 'r') as f:
 arr = np.array(data)
 
 negative_reviews = extract_negative(data)
-sample_reviews = negative_reviews[:50]
 sample_reviews = '\n\n'.join(sample_reviews)
 
 tags = extract_tags(sample_reviews)
