@@ -21,14 +21,12 @@ Technical tasks:
 1. Fetch data from 2GIS
 
    - Data fetcher pipline
-   - Preprocess data (keep time stamps, text, rating)
+   - Preprocess and filter data (keep time stamps, text, rating)
    - Filter by rating
 
 2. Assign tags to each review
 
-   - Batch processing
-   - Preprocess data
-   -
+   - Batch processing (?)
 
 3. Create charts
 
