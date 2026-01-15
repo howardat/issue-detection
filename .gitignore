@@ -1,0 +1,33 @@
+Plaintext
+# --- Python Specific ---
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# --- Poetry & Environments ---
+.venv/
+env/
+venv/
+ENV/
+.python-version
+# Note: DO NOT ignore poetry.lock. It belongs in Git!
+
+# --- Data & ML (The 'Kaspi' Moat) ---
+# Ignore raw data files from 2GIS
+data/*.json
+data/*.csv
+data/*.xlsx
+test/json/
+
+# Ignore temporary logs and analysis exports
+*.log
+analysis_results.json
+plots/
+
+# --- Configuration & Secrets ---
+.env
+config.yaml
+.idea/
+.vscode/
+.DS_Store

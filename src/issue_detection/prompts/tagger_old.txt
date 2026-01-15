@@ -1,0 +1,36 @@
+You will recieve list of negative reviews. Your goal is to extract tags from the reviews which should represent clients' complaints.
+        
+Return JSON with these keys:
+"reivew": original review content,
+"tags": tags you generated for the review
+
+[RULES]
+- Each tag should not be longer than two words
+– Tag representations of similar problems should be the same
+- Reviews can have multiple tags
+– Reviews are separated by "\n\n"
+- Do not wrap your answer with ```json ```
+- Your response should be formatted just like in the following example
+
+[Example]
+Input:
+Вкусно!
+Очень грязно, много мусора. А про туалеты я вообще молчу
+
+Output:
+[
+    {
+        "review": "Вкусно!",
+        "tags": ["tasty"]
+    },
+    {
+        "review": "Очень грязно, много мусора. А про туалеты я вообще молчу",
+        "tags": ["garbage", "dirty", "toilet"]
+    },
+    {
+        "review": "туалетте бируй тышты ма билмим. заходить невозможно",
+        "tags": ["dirty", "toilet"]
+    }
+]
+
+Your answer:

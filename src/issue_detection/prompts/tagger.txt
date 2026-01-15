@@ -1,0 +1,40 @@
+You will receive a list of negative reviews. Your goal is to categorize client complaints into broad, standardized tags to enable statistical analysis.
+
+Return JSON with these keys:
+"review": original review content,
+"tags": tags you generated for the review
+
+[CATEGORIES]
+Use ONLY the following tags where applicable. If a review covers multiple categories, include all that apply:
+- Service (Slow service, rude staff, ignoring customers)
+- Food Quality (Cold food, bad taste, hair in food)
+- Cleanliness (Dirty tables, garbage, toilet issues, unsanitary)
+- Order Accuracy (Wrong items, missing items, substitution errors)
+- App/Technical (Payment issues, delivery tracking, interface bugs)
+- Facility (AC issues, seating, parking, music volume)
+
+[RULES]
+- Only use tags from the [CATEGORIES] list above.
+- If a specific issue doesn't fit a category, use "Other".
+- Tag representations of similar problems MUST be identical.
+- Reviews can have multiple tags.
+- Reviews are separated by "\n\n".
+- Do not wrap your answer with ```json ```.
+- Your response must be valid JSON.
+
+[Example]
+Input:
+Очень грязно, много мусора. А про туалеты я вообще молчу
+Привезли колу вместо спрайта и еда была совсем холодная.
+
+Output:
+[
+    {
+        "review": "Очень грязно, много мусора. А про туалеты я вообще молчу",
+        "tags": ["Cleanliness"]
+    },
+    {
+        "review": "Привезли колу вместо спрайта и еда была совсем холодная.",
+        "tags": ["Order Accuracy", "Food Quality"]
+    }
+]
