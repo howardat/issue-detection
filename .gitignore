@@ -19,7 +19,7 @@ poetry.lock
 data/*.json
 data/*.csv
 data/*.xlsx
-test/json/*.json
+tests/json/*
 
 # Ignore temporary logs and analysis exports
 *.log
