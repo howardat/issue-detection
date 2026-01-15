@@ -11,6 +11,7 @@ env/
 venv/
 ENV/
 .python-version
+poetry.lock
 # Note: DO NOT ignore poetry.lock. It belongs in Git!
 
 # --- Data & ML (The 'Kaspi' Moat) ---
@@ -18,7 +19,7 @@ ENV/
 data/*.json
 data/*.csv
 data/*.xlsx
-test/json/
+test/json/*
 
 # Ignore temporary logs and analysis exports
 *.log
