@@ -1,30 +1,20 @@
+import copy
 import json
-import numpy as np
 
-from data_processing import extract_negative
-from tag_generation import extract_tags
-from visualization import visualize
+from fetch_data import get_reviews
+from tag_generation import batch_processing
 
-OUTPUT_FILE = '../../tests/json/tags.json'
+def main():
+    data = get_reviews('70000001109579027')
+    
+    tags = batch_processing(data)
 
-with open('../../data/reviews.json', 'r') as f:
-    data = json.load(f)
-arr = np.array(data)
+    data_with_tags = copy.deepcopy(data)
+    for i, item in enumerate(data_with_tags):
+        item['tags'] = tags[i]
 
-negative_reviews = extract_negative(data)
-sample_reviews = '\n\n'.join(sample_reviews)
+    with open('../../tests/json/reviews_with_tags.json', 'w') as f:
+        json.dump(data_with_tags, f, ensure_ascii=False, indent=4)
 
-tags = extract_tags(sample_reviews)
-
-if tags.startswith("```json"):
-    tags = tags[7:]  # Remove the first 7 characters
-if tags.endswith("```"):
-    tags = tags[:-3]  # Remove the last 3 characters
-
-# Final trim to ensure no stray newlines remain
-tags = tags.strip()
-
-with open(OUTPUT_FILE, 'w') as f:
-    f.write(tags)
-
-visualize(OUTPUT_FILE)
+if __name__ == "__main__":
+    main()
