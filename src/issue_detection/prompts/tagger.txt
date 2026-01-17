@@ -15,7 +15,6 @@ Use ONLY the following tags where applicable. If a review covers multiple catego
 - Generate only one list of tags for one review.
 - Tag representations of similar problems MUST be identical.
 - Reviews can have multiple tags.
-- Reviews are separated by "\n----\n".
 - Do not wrap your answer with ```json ```.
 - Your response must be valid JSON.
 
