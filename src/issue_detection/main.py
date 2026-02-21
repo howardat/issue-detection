@@ -5,7 +5,7 @@ from fetch_data import get_reviews
 from tag_generation import batch_processing
 
 def main():
-    data = get_reviews('70000001109579027')
+    data = get_reviews('../../data/tickets.csv')
     
     tags = batch_processing(data)
 
